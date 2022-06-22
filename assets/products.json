@@ -1,0 +1,26 @@
+[
+  {
+    "id": "t-shirt",
+    "name": "T-Shirt",
+    "price": 35.0,
+    "imageUrl": "http://placekitten.com/640/640",
+    "description": "A white t-shirt",
+    "url": "/api/products/tshirt"
+  },
+  {
+    "id": "wallet",
+    "name": "Wallet",
+    "price": 20.0,
+    "imageUrl": "http://placekitten.com/640/640",
+    "description": "A fancy wallet",
+    "url": "/api/products/wallet"
+  },
+  {
+    "id": "cup",
+    "name": "Cup",
+    "price": 5.0,
+    "imageUrl": "http://placekitten.com/640/640",
+    "description": "A tea cup",
+    "url": "/api/products/cup"
+  }
+]
