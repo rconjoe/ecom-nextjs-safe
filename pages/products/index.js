@@ -3,7 +3,15 @@ import products from "../../assets/products.json";
 import SingleProduct from "../../components/SingleProduct";
 import styles from "../../styles/Product.module.css";
 
-export default function Product() {
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:3000/api/products");
+  const products = await res.json();
+  return {
+    props: { products },
+  };
+}
+
+export default function Product({ props }) {
   //console.log(products);
   return (
     <div className={styles.container}>
