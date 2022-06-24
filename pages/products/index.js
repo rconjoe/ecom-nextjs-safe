@@ -36,7 +36,7 @@ export default function Product({ props }) {
 
       <div
         id="snipcart"
-        data-api-key="MWMyNTRkNWItYjUzNS00MjYyLWFiMGMtNGEzNzg4ZGJlMWJkNjM3OTA2Nzg0NzAzMTg2NTY5"
+        data-api-key={process.env.SNIPCART_API_KEY}
         hidden
       ></div>
       <script

@@ -1,5 +1,18 @@
-import products from "../../../assets/products.json";
+import { buildClient } from "@datocms/cma-client-node";
 
-export default function handler(req, res) {
-  res.json(products);
+const client = buildClient({
+  apiToken: process.env.DATO_FULL_ACCESS_TOKEN,
+});
+
+export default async function handler(req, res) {
+  try {
+    const records = await client.items.list({
+      filter: {
+        type: "product",
+      },
+    });
+    res.json(records);
+  } catch (err) {
+    console.log(err);
+  }
 }
