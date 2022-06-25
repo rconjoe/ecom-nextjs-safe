@@ -1,5 +1,4 @@
 import Head from "next/head";
-import products from "../../assets/products.json";
 import SingleProduct from "../../components/SingleProduct";
 import styles from "../../styles/Product.module.css";
 
@@ -11,7 +10,7 @@ export async function getServerSideProps() {
   };
 }
 
-export default function Product({ props }) {
+export default function Product({ products }) {
   //console.log(products);
   return (
     <div className={styles.container}>
