@@ -4,7 +4,7 @@ import styles from "../../styles/Product.module.css";
 
 const baseURL =
   process.env.NODE_ENV === "production"
-    ? "https:relaxed-blini-9425d4.netlify.app"
+    ? "https:relaxed-blini-9425d4.netlify.app/api"
     : "http://localhost:3000/api";
 
 export async function getServerSideProps() {
