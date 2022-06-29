@@ -2,8 +2,13 @@ import Head from "next/head";
 import SingleProduct from "../../components/SingleProduct";
 import styles from "../../styles/Product.module.css";
 
+const baseURL =
+  process.env.NODE_ENV === "production"
+    ? "https:relaxed-blini-9425d4.netlify.app"
+    : "http://localhost:3000/api";
+
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch(`${baseURL}/products`);
   const products = await res.json();
   return {
     props: { products },
