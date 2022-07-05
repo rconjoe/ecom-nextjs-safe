@@ -27,7 +27,7 @@ export default function SingleProduct({
           data-item-id={item_id}
           data-item-image="http://placekitten.com/640/640"
           data-item-title={title}
-          data-item-url={`${hostname}/${slug}`}
+          data-item-url={`${hostname}/api/${slug}`}
           data-item-price={price}
         >
           Add to Cart
