@@ -9,7 +9,7 @@ export default function SingleProduct({
   description,
   price,
 }) {
-  console.log(title);
+  const hostname = process.env.NODE_ENV === 'production' ? 'https://frabjous-vacherin-4e37c4.netlify.app' : 'http://localhost:3000'
   return (
     <div key={item_id} className={styles.product}>
       <Image
@@ -27,7 +27,7 @@ export default function SingleProduct({
           data-item-id={item_id}
           data-item-image="http://placekitten.com/640/640"
           data-item-title={title}
-          data-item-url={slug}
+          data-item-url={`${hostname}/${slug}`}
           data-item-price={price}
         >
           Add to Cart
