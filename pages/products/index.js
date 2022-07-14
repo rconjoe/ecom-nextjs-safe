@@ -13,7 +13,6 @@ export async function getServerSideProps() {
 }
 
 export default function Product({ products }) {
-  //console.log(products);
   return (
     <div className={styles.container}>
       <Head>
@@ -26,7 +25,7 @@ export default function Product({ products }) {
       </Head>
 
       <main className={styles.main}>
-        <h1>E-Commerse in Next.js and SnipCard</h1>
+        <h1>E-Commerce in Next.js and SnipCart</h1>
 
         <div className={styles.grid}>
           {products.map((product, i) => {
