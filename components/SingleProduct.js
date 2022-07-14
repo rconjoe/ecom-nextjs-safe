@@ -23,7 +23,7 @@ export default function SingleProduct({
       <span>${price}</span>
       <div>
         <button
-          class="snipcart-add-item"
+          className="snipcart-add-item"
           data-item-id={item_id}
           data-item-image="http://placekitten.com/640/640"
           data-item-title={title}
