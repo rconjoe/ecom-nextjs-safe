@@ -9,7 +9,10 @@ export default function SingleProduct({
   description,
   price,
 }) {
-  console.log(title);
+  const hostname =
+    process.env.NODE_ENV === "production"
+      ? "https:relaxed-blini-9425d4.netlify.app/api"
+      : "https://2c3d-47-144-182-75.ngrok.io";
   return (
     <div key={item_id} className={styles.product}>
       <Image
