@@ -12,6 +12,7 @@ export default async function handler(req, res) {
       },
     });
     res.json(records);
+    console.log(records);
   } catch (err) {
     console.log(err);
   }

@@ -14,7 +14,9 @@ export default async function handler(req, res) {
         },
       },
     });
-    res.json(records[0]);
+    console.log(records);
+    res.json(records[1]);
+    console.log(records)
   } catch (err) {
     console.log(err);
   }
