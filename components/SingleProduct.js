@@ -9,7 +9,9 @@ export default function SingleProduct({
   description,
   price,
 }) {
-  const hostname = process.env.NODE_ENV === 'production' ? 'https://frabjous-vacherin-4e37c4.netlify.app' : 'http://localhost:3000'
+  const hostname = process.env.NODE_ENV === 'production'
+    ? 'https://frabjous-vacherin-4e37c4.netlify.app'
+    : 'https://9afa-47-144-182-75.ngrok.io'
   return (
     <div key={item_id} className={styles.product}>
       <Image
@@ -25,9 +27,10 @@ export default function SingleProduct({
         <button
           className="snipcart-add-item"
           data-item-id={item_id}
+          data-item-name={title}
           data-item-image="http://placekitten.com/640/640"
-          data-item-title={title}
-          data-item-url={`${hostname}/api/${slug}`}
+          data-item-description={description}
+          data-item-url={`${hostname}/api/products/${slug}`}
           data-item-price={price}
         >
           Add to Cart
